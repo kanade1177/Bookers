@@ -1,7 +1,23 @@
-<h3>title:</h3>
-<p><%= @book.title %></p>
-<h3>book:</h3>
-<p><%= @book.body %></p>
+<head>
+  <meta charset="UTF-8" />
+  <title>Show</title>
+  <link rel="stylesheet" href="show.scss" />
+</head>
 
-<p><%= link_to("Back","/books")%></p>
 
+ <div class="title-area">
+  <strong>Title:</strong>
+  <p><%= @book.title %></p>
+ </div>
+
+ <div class="body-area">
+  <strong>Body:</strong>
+  <p><%= @book.body %></p>
+ </div>
+
+
+ <div class="link-area">
+  <p><%= link_to("Edit","/books/#{@book.id}/edit") %></p>
+  <p>|</p>
+  <p><%= link_to("Back","/books")%></p>
+ </div>
