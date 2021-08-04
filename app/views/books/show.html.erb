@@ -3,8 +3,11 @@
   <title>Show</title>
   <link rel="stylesheet" href="show.scss" />
 </head>
-
-
+ 
+ <div class="flash">
+  <%= flash[:notice] %>
+ </div>
+ 
  <div class="title-area">
   <strong>Title:</strong>
   <p><%= @book.title %></p>
